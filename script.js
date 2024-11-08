@@ -57565,7 +57565,7 @@ window.RC_BOOKINGS_WIDGET2 = {
       __WEBPACK_IMPORTED_MODULE_8_react_redux__["a" /* Provider */],
       { store: store },
       __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_10__application_js_jsx__["a" /* default */], { agency_token: agency_token, services: services(agency_token), apartmentFilters: { apartmentIds: searchConditions['apartment_ids'], cityIds: searchConditions['city_ids'] } })
-    ), document.getElementById('rc-bookings-widget-root'));
+    ), document.getElementById('rc-bookings-widget-root-2'));
   },
 
   domain: function domain() {
