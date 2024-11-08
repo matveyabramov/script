@@ -56799,7 +56799,7 @@ module.exports = function(originalModule) {
     return new Promise(function (resolve, reject) {
       var redirectUrl = window.location.href;
 
-      fetch(RC_BOOKINGS_WIDGET.domain() + '/widgets/bookings/wallet/event_calendars/' + event_id + '/payments/new?token=' + token + '&redirect_url=' + redirectUrl, {
+      fetch(RC_BOOKINGS_WIDGET2.domain() + '/widgets/bookings/wallet/event_calendars/' + event_id + '/payments/new?token=' + token + '&redirect_url=' + redirectUrl, {
         mode: 'cors'
       }).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["a" /* checkStatus */]).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["b" /* toJSON */]).then(resolve).catch(reject);
     });
@@ -56807,7 +56807,7 @@ module.exports = function(originalModule) {
 
   checkPayment: function checkPayment(token, platform_deal_id) {
     return new Promise(function (resolve, reject) {
-      fetch(RC_BOOKINGS_WIDGET.domain() + '/widgets/bookings/wallet/payments/check_payment/' + platform_deal_id + '?token=' + token, {
+      fetch(RC_BOOKINGS_WIDGET2.domain() + '/widgets/bookings/wallet/payments/check_payment/' + platform_deal_id + '?token=' + token, {
         mode: 'cors'
       }).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["a" /* checkStatus */]).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["b" /* toJSON */]).then(resolve).catch(reject);
     });
@@ -57037,7 +57037,7 @@ var Application = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Application.__proto__ || Object.getPrototypeOf(Application)).call(this, props));
 
     _this.state = { settings: { color: '', is_prepaid: false, is_frame: false, is_enabled_prepaid: false, fio: '', address: '' } };
-    __WEBPACK_IMPORTED_MODULE_7__services_settings_js_es6__["a" /* default */].get(RC_BOOKINGS_WIDGET.domain(), _this.props.agency_token).then(function (settings) {
+    __WEBPACK_IMPORTED_MODULE_7__services_settings_js_es6__["a" /* default */].get(RC_BOOKINGS_WIDGET2.domain(), _this.props.agency_token).then(function (settings) {
       return _this.setState({ settings: settings });
     });
     _this.__successNewPayment = _this.__successNewPayment.bind(_this);
@@ -57168,7 +57168,7 @@ var selectState = function selectState(state) {
       }).join('');
     }
     return new Promise(function (resolve, reject) {
-      fetch(RC_BOOKINGS_WIDGET.domain() + '/widgets/bookings/search/' + token + '.json?' + params, {
+      fetch(RC_BOOKINGS_WIDGET2.domain() + '/widgets/bookings/search/' + token + '.json?' + params, {
         mode: 'cors'
       }).then(__WEBPACK_IMPORTED_MODULE_2__common_js_es6__["a" /* checkStatus */]).then(__WEBPACK_IMPORTED_MODULE_2__common_js_es6__["b" /* toJSON */]).then(resolve).catch(reject);
     });
@@ -57194,7 +57194,7 @@ var selectState = function selectState(state) {
     }
     console.log('getPrice : ' + params);
     return new Promise(function (resolve, reject) {
-      fetch(RC_BOOKINGS_WIDGET.domain() + '/widgets/bookings/apartments/' + id + '/price.json?' + params, { mode: 'cors' }).then(__WEBPACK_IMPORTED_MODULE_2__common_js_es6__["a" /* checkStatus */]).then(__WEBPACK_IMPORTED_MODULE_2__common_js_es6__["b" /* toJSON */]).then(resolve).catch(reject);
+      fetch(RC_BOOKINGS_WIDGET2.domain() + '/widgets/bookings/apartments/' + id + '/price.json?' + params, { mode: 'cors' }).then(__WEBPACK_IMPORTED_MODULE_2__common_js_es6__["a" /* checkStatus */]).then(__WEBPACK_IMPORTED_MODULE_2__common_js_es6__["b" /* toJSON */]).then(resolve).catch(reject);
     });
   }
 });
@@ -57215,7 +57215,7 @@ var selectState = function selectState(state) {
 /* harmony default export */ __webpack_exports__["a"] = ({
   create: function create(token, apartment_id, event_attrs, client_attrs) {
     return new Promise(function (resolve, reject) {
-      fetch(RC_BOOKINGS_WIDGET.domain() + '/widgets/bookings/apartments/' + apartment_id + '/event_calendars?token=' + token, {
+      fetch(RC_BOOKINGS_WIDGET2.domain() + '/widgets/bookings/apartments/' + apartment_id + '/event_calendars?token=' + token, {
         mode: 'cors',
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -57226,7 +57226,7 @@ var selectState = function selectState(state) {
 
   show: function show(token, event_calendar_id) {
     return new Promise(function (resolve, reject) {
-      fetch(RC_BOOKINGS_WIDGET.domain() + '/widgets/bookings/event_calendars/' + event_calendar_id + '?token=' + token, {
+      fetch(RC_BOOKINGS_WIDGET2.domain() + '/widgets/bookings/event_calendars/' + event_calendar_id + '?token=' + token, {
         mode: 'cors'
       }).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["a" /* checkStatus */]).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["b" /* toJSON */]).then(resolve).catch(reject);
     });
@@ -57234,7 +57234,7 @@ var selectState = function selectState(state) {
 
   fail: function fail(token, event_calendar_id) {
     return new Promise(function (resolve, reject) {
-      fetch(RC_BOOKINGS_WIDGET.domain() + '/widgets/bookings/event_calendars/' + event_calendar_id + '/fail?token=' + token, {
+      fetch(RC_BOOKINGS_WIDGET2.domain() + '/widgets/bookings/event_calendars/' + event_calendar_id + '/fail?token=' + token, {
         mode: 'cors'
       }).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["a" /* checkStatus */]).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["b" /* toJSON */]).then(resolve).catch(reject);
     });
@@ -57242,7 +57242,7 @@ var selectState = function selectState(state) {
 
   valid: function valid(token, apartment_id, event_attrs, client_attrs) {
     return new Promise(function (resolve, reject) {
-      fetch(RC_BOOKINGS_WIDGET.domain() + '/widgets/bookings/apartments/' + apartment_id + '/event_calendars/valid?token=' + token, {
+      fetch(RC_BOOKINGS_WIDGET2.domain() + '/widgets/bookings/apartments/' + apartment_id + '/event_calendars/valid?token=' + token, {
         mode: 'cors',
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -57439,7 +57439,7 @@ var BookingWait = function (_Component) {
           null,
           '\u0412\u0430\u0448 \u043F\u043B\u0430\u0442\u0451\u0436 \u0432 \u043E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0435. \u041F\u043E\u0436\u0430\u043B\u0443\u0439\u0441\u0442\u0430, \u043F\u043E\u0434\u043E\u0436\u0434\u0438\u0442\u0435...'
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: RC_BOOKINGS_WIDGET.domain() + '/img/payment/spinner.gif' })
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: RC_BOOKINGS_WIDGET2.domain() + '/img/payment/spinner.gif' })
       );
     }
   }, {
@@ -57555,7 +57555,7 @@ var loadCss = function loadCss(path) {
   __WEBPACK_IMPORTED_MODULE_13__helpers_loader_js_es6__["a" /* default */].loadCss('' + host + path);
 };
 
-window.RC_BOOKINGS_WIDGET = {
+window.RC_BOOKINGS_WIDGET2 = {
   init: function init(agency_token) {
     var searchConditions = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
@@ -57657,7 +57657,7 @@ TermsOfServiceContainer.propTypes = {
         return new Promise(function (resolve, reject) {
             var redirectUrl = window.location.href;
 
-            fetch(RC_BOOKINGS_WIDGET.domain() + '/widgets/bookings/moneta/event_calendars/' + event_id + '/payments/new?token=' + token + '&redirect_url=' + redirectUrl, {
+            fetch(RC_BOOKINGS_WIDGET2.domain() + '/widgets/bookings/moneta/event_calendars/' + event_id + '/payments/new?token=' + token + '&redirect_url=' + redirectUrl, {
                 mode: 'cors'
             }).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["a" /* checkStatus */]).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["b" /* toJSON */]).then(resolve).catch(reject);
         });
@@ -57680,7 +57680,7 @@ TermsOfServiceContainer.propTypes = {
         return new Promise(function (resolve, reject) {
             var redirectUrl = window.location.href;
 
-            fetch(RC_BOOKINGS_WIDGET.domain() + '/widgets/bookings/moneta/event_calendars/' + event_id + '/payments/new?token=' + token + '&redirect_url=' + redirectUrl, {
+            fetch(RC_BOOKINGS_WIDGET2.domain() + '/widgets/bookings/moneta/event_calendars/' + event_id + '/payments/new?token=' + token + '&redirect_url=' + redirectUrl, {
                 mode: 'cors'
             }).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["a" /* checkStatus */]).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["b" /* toJSON */]).then(resolve).catch(reject);
         });
@@ -57701,7 +57701,7 @@ TermsOfServiceContainer.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = ({
   show: function show(token) {
     return new Promise(function (resolve, reject) {
-      fetch(RC_BOOKINGS_WIDGET.domain() + '/widgets/bookings/terms?token=' + token, {
+      fetch(RC_BOOKINGS_WIDGET2.domain() + '/widgets/bookings/terms?token=' + token, {
         mode: 'cors',
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
@@ -57726,7 +57726,7 @@ TermsOfServiceContainer.propTypes = {
     return new Promise(function (resolve, reject) {
       var redirectUrl = window.location.href;
 
-      fetch(RC_BOOKINGS_WIDGET.domain() + '/widgets/bookings/yandex/kassa/event_calendars/' + event_id + '/payments/new?token=' + token + '&redirect_url=' + redirectUrl, {
+      fetch(RC_BOOKINGS_WIDGET2.domain() + '/widgets/bookings/yandex/kassa/event_calendars/' + event_id + '/payments/new?token=' + token + '&redirect_url=' + redirectUrl, {
         mode: 'cors'
       }).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["a" /* checkStatus */]).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["b" /* toJSON */]).then(resolve).catch(reject);
     });
@@ -57749,7 +57749,7 @@ TermsOfServiceContainer.propTypes = {
     return new Promise(function (resolve, reject) {
       var redirectUrl = window.location.href;
 
-      fetch(RC_BOOKINGS_WIDGET.domain() + '/widgets/bookings/yandex/money/event_calendars/' + event_id + '/payments/new?token=' + token + '&redirect_url=' + redirectUrl, {
+      fetch(RC_BOOKINGS_WIDGET2.domain() + '/widgets/bookings/yandex/money/event_calendars/' + event_id + '/payments/new?token=' + token + '&redirect_url=' + redirectUrl, {
         mode: 'cors'
       }).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["a" /* checkStatus */]).then(__WEBPACK_IMPORTED_MODULE_1__common_js_es6__["b" /* toJSON */]).then(resolve).catch(reject);
     });
